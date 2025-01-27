@@ -363,6 +363,17 @@ id: root
     }
 
     Keys.onPressed: {
+        // Home
+        if (event.key === Qt.Key_Home && !event.isAutoRepeat) {
+            event.accepted = true;
+            gamegrid.currentIndex = 0;
+        }
+        // End
+        if (event.key === Qt.Key_End && !event.isAutoRepeat) {
+            event.accepted = true;
+            gamegrid.currentIndex = gamegrid.count - 1;
+        }
+
         // Accept
         if (api.keys.isAccept(event) && !event.isAutoRepeat) {
             event.accepted = true;
