@@ -113,6 +113,12 @@ id: root
             sortByIndex++;
         else
             sortByIndex = 0;
+
+        if (sortByFilter[sortByIndex] === "sort_title") {
+            orderBy = Qt.AscendingOrder;
+        } else {
+            orderBy = Qt.DescendingOrder;
+        }
     }
 
     function toggleOrderBy() {
